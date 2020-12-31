@@ -1,0 +1,41 @@
+#for selecting new Jupitar notebook directory
+
+import os 
+path="directory where I want to save my jupitar notebook tasks"
+os.chdir(path)
+
+import numpy as np
+import pandas as pd
+%matplotlib inline
+df= pd.read_csv("WHO-COVID-19-global-data.csv")
+df
+#index number dekhar jonno
+df_index=df.index
+df_index
+# column e ki ase dekhar jonno
+df_cols=df.columns
+df_cols
+#index value dekhar jonno 
+df_index.values
+df.values
+df.dtypes
+#kotogulo number ase
+df.shape
+#top 5 entry dekhar jonno
+df.head(5)
+#last 5 entry dekhar jonno
+df.tail()
+#dataframe er info janar jonno
+df.info()
+#mean , std oo onnnanno description pabar jonno
+df.describe()
+#1ta column info dekhar jonno
+df["Country"]
+#kono desher nam repeat korbena
+df["country"].unique()
+
+
+
+
+
+
