@@ -1,8 +1,9 @@
 # 30-mn-Python-Pandas
 Complete Python Pandas Data Science Tutorial!.csv
 #for selecting new Jupitar notebook directory
-Import os 
-Path=" directory where I want to save my jupitar notebook tasks"
+
+import os 
+path="directory where I want to save my jupitar notebook tasks"
 os.chdir(path)
 
 #Python pandas started 
@@ -29,3 +30,5 @@ print(df.Name[0:5])
 print(df[["Name", "Type 1", "HP"]])
 #Read each Row
 print(df.head(4))
+##Read each row
+print(df.iloc[0:4])
