@@ -33,6 +33,30 @@ df.describe()
 df["Country"]
 #kono desher nam repeat korbena
 df["country"].unique()
+#strip deyar jonno
+df.columns=[col.strip() for col in df.columns]
+df.columns
+#Column nirdisto 
+df.Country
+#kivabe ekta selected raw  k dekhano jay (loc information ja ami dekhte chai tar modde level dite use hoy)
+df.loc[1:4,"Country"]
+df.loc[1:8, ["Country", "New_cases"]]
+df.Country=="United States of America"
+#jodi kono 1ti column or observation er sathe related sob tottho dekhte chai
+df[df.Country=="United States of America"]
+#jodi amra shorto diye kono dekhte chai
+df[df.New_deaths>1000]
+df.loc[df.New_deaths>1000, ["New_deaths", "Country"]]
+df.loc[df.Country_code=="US", ["New_cases"]].max()
+df.loc[df.Country_code=="US", ["New_cases"]].sum()
+#kono column e max er index number show korbe
+df.New_deaths.idxmax()
+df.loc[df.New_deaths.idxmax(),["Date_reported", "Country", "New_cases"]]
+df[df.New_deaths<0]
+#New column toiri kora 
+df["pct_cases"]=(df["New_cases"]/df["Cumulative_cases"])*100
+df
+
 
 
 
